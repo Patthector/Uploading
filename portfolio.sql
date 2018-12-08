@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2018 at 11:43 PM
+-- Generation Time: Dec 08, 2018 at 01:38 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -21,31 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `portfolio`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `practice_todos`
---
-
-DROP TABLE IF EXISTS `practice_todos`;
-CREATE TABLE `practice_todos` (
-  `id` int(11) NOT NULL,
-  `name` varchar(500) DEFAULT NULL,
-  `body` text,
-  `created_date` datetime DEFAULT CURRENT_TIMESTAMP,
-  `updated_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `practice_todos`
---
-
-INSERT INTO `practice_todos` (`id`, `name`, `body`, `created_date`, `updated_date`) VALUES
-(3, 'First Todo By Pattor', 'Hey Pattor this is my first TODO.', '2018-05-15 03:27:13', NULL),
-(5, 'Third TODO by Pattor', 'This is the third TODO, let see how to update this post', '2018-05-15 09:13:14', NULL),
-(7, 'Task #1', 'Convert our TODO app in a OOP app, to add some functionality later on!', '2018-05-15 12:19:01', '2018-05-15 12:19:43'),
-(8, 'Changing the Title.', 'Finding out if the changes in DB have broken the app.!!!', '2018-05-17 20:43:48', '2018-05-17 20:45:34');
 
 -- --------------------------------------------------------
 
@@ -162,12 +137,6 @@ INSERT INTO `todo_app_users` (`id`, `first_name`, `last_name`, `password`) VALUE
 --
 
 --
--- Indexes for table `practice_todos`
---
-ALTER TABLE `practice_todos`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `todo_app_collections`
 --
 ALTER TABLE `todo_app_collections`
@@ -205,11 +174,6 @@ ALTER TABLE `todo_app_users`
 -- AUTO_INCREMENT for dumped tables
 --
 
---
--- AUTO_INCREMENT for table `practice_todos`
---
-ALTER TABLE `practice_todos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `todo_app_collections`
 --
